@@ -17,7 +17,7 @@
 Файлы `latest.yml`, `.blockmap` и `release-manifest.json` используются обновлятором; отдельно скачивать их не нужно. Рядом с установщиком доступен `.sha256` для ручной проверки:
 
 ```powershell
-Get-FileHash .\MollyStudio-1.4.1.0-x64-setup.exe -Algorithm SHA256
+Get-FileHash .\MollyStudio-1.4.2.0-x64-setup.exe -Algorithm SHA256
 ```
 
 ## Обратная связь
