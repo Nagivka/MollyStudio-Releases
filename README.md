@@ -1,29 +1,33 @@
 # MollyStudio
 
-Редактор GUI, пиксельной графики и префиксов для Minecraft Java Edition.
+Редактор GUI для Minecraft Java Edition, пиксельной графики, префиксов и 3D-надписей.
 
 ## Скачать
 
-**[Последняя версия для Windows 10/11 x64](https://github.com/Nagivka/MollyStudio-Releases/releases/latest)**
+**[Последняя версия](https://github.com/Nagivka/MollyStudio-Releases/releases/latest)**
 
-В разделе Assets скачайте файл `MollyStudio-…-x64-setup.exe` и запустите установщик. Можно выбрать папку и создать ярлыки. Дополнительные компоненты не нужны; редактор работает без интернета.
+| Система | Какой файл скачать |
+| --- | --- |
+| Windows 10/11, x64 | `*-x64-setup.exe` — установщик |
+| macOS, Apple Silicon (M1 и новее) | `*-arm64-mac.dmg` |
+| macOS, Intel | `*-x64-mac.dmg` |
+| Linux, универсальный запуск | `*-x64-linux.AppImage` или `*-arm64-linux.AppImage` |
+| Ubuntu, Debian, Linux Mint | `*-x64-linux.deb` или `*-arm64-linux.deb` |
+| Fedora, openSUSE и системы с RPM | `*-x64-linux.rpm` или `*-arm64-linux.rpm` |
 
-## Обновления
+Для обычного Intel/AMD-компьютера выбирайте **x64**, для ARM — **arm64**. В Linux разрешите запуск AppImage в свойствах файла. Совместимость и ограничения: [подробнее](https://github.com/Nagivka/MollyStudio/blob/main/docs/platform-compatibility.md).
 
-Начиная с установочной версии 1.4.1.0 приложение проверяет новые выпуски и показывает уведомление в главном меню. Ручная проверка и параметры фоновой загрузки: **Настройки → О программе**. Установка выполняется по кнопке **Установить и перезапустить** после сохранения автокопий. Отмена закрытия отменяет установку. Проекты `.mlst` и настройки сохраняются.
+Файлы `.yml`, `.blockmap`, `release-manifest*.json` нужны автообновлению — вручную их скачивать не требуется. `SHA256SUMS.txt` предназначен для проверки загрузки. Архивы **Source code** на GitHub содержат исходники, а не готовую программу.
 
-Для перехода с portable 1.4.0.0 установите новую версию один раз вручную. Старый portable остаётся в истории релизов.
+Проекты сохраняются в **.mlst**, готовые изображения — в **PNG**. Обновления доступны в «Настройки → О программе».
 
-Файлы `latest.yml`, `.blockmap` и `release-manifest.json` используются обновлятором; отдельно скачивать их не нужно. Рядом с установщиком доступен `.sha256` для ручной проверки:
+## Разработка
 
-```powershell
-Get-FileHash .\MollyStudio-1.4.2.0-x64-setup.exe -Algorithm SHA256
+Node.js 22.12+:
+
+```sh
+npm ci
+npm start
 ```
 
-## Обратная связь
-
-Ошибки и предложения: [Issues](https://github.com/Nagivka/MollyStudio-Releases/issues). Укажите версию и шаги воспроизведения. Не прикладывайте личные проекты без необходимости.
-
-Автор: [nagivka](https://github.com/Nagivka).
-
-Здесь находятся готовые сборки и изменения. Исходники приложения хранятся отдельно в приватном репозитории. Автоматические архивы «Source code» содержат только файлы этого публичного репозитория.
+[Выпуск сборок](https://github.com/Nagivka/MollyStudio/blob/main/docs/releases.md) · [Лицензия MIT](https://github.com/Nagivka/MollyStudio/blob/main/LICENSE) · [Сторонние ресурсы](https://github.com/Nagivka/MollyStudio/blob/main/THIRD_PARTY_NOTICES.md)
